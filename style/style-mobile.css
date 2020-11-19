@@ -1,0 +1,60 @@
+@media screen and (max-width: 1024px){
+    header{
+        width: 95%;
+    }
+
+    section.socialLinks{
+        left: 0;
+    }
+
+
+    section.firstContent{
+        width: 95%;
+        display: block;
+        margin: auto;
+    }
+    
+    section.firstContent article{
+        width: 100%;
+        left: unset;
+        text-align: center;
+    }
+
+    section.secondaryContent{
+        width: 95%;
+        height: 700px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid orange;
+    }
+    
+    section.secondaryContent .cards{
+        width: 100%;
+        text-align: center;
+        border: 1px solid purple;
+    }
+
+    section.thirdContent{
+        height: 250px;
+    }
+
+    section.thirdContent article{
+        width: 95%;
+        height: 100%;
+        border: 1px solid blue;
+        position: relative;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    section.thirdContent article button{
+        border: 1px solid green;
+        position: unset;
+    }
+}
