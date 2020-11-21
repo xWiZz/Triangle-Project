@@ -1,23 +1,44 @@
 body{
     margin: 0;
     padding: 0;
-    border: 1px solid red;
+    font-family: 'Open Sans', sans-serif;
+    color: rgb(145, 145, 145);
+    line-height: 25px;
 }
 
 header{
     width: 70%;
     height: 100px;
-    border: 1px solid red;
     position: relative;
     margin: auto;
+    margin-top: unset;
+}
+
+button{
+    background: transparent;
+    border: 2px solid #4fccce;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    color: #4fccce;
 }
 
 section.socialLinks{
-    width: 20%;
+    width: 150px;
     position: absolute;
+    display: flex;
+    justify-content: space-between;
     right: 0;
     height: 20px;
-    border: 1px solid blue;
+}
+
+section.socialLinks img{
+    width: 15px;
+    height: 15px;
+}
+
+.burger-button{
+    display: none;
 }
 
 nav{
@@ -25,68 +46,223 @@ nav{
     justify-content: space-between;
     align-items: center;
     height: 100%;
+    margin-top: 25px;
 }
 
 nav .logo{
-    width: 20%;
-    border: solid 1px green;
+    width: 15%;
+}
+
+nav .logo img{
+    width: 100%;
+}
+
+.burger{
+    display: none;
 }
 
 nav ul{
     width: 50%;
-    border: 1px solid green; 
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+
+nav input {
+    display: none;
+}
+
+nav ul .entry-links{
+    width: 100%;
     display: flex;
     justify-content: space-between;
 }
 
-
-
-
-main{
-    border: 1px solid red;
+nav ul .entry-links li{
+    list-style: none;
+    width: unset;
+    margin: 0;
 }
 
-section.firstContent{
-    width: 100%;
-    border: 1px solid blue;
-    height: 500px;
+nav ul .entry-links li a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+}
+
+nav ul .entry-links li a#home{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #4fccce;
+}
+
+nav ul .entry-links li a#pages{
+    position: relative;
+}
+nav ul .entry-links li a#pages::after{
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    background-image: url('/img/fleche-vers-le-bas.svg');
+    background-size: contain;
+    right: -20px;
+}
+nav ul .entry-links li a#blog{
+    position: relative;
+}
+nav ul .entry-links li a#blog::after{
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    background-image: url('/img/fleche-vers-le-bas.svg');
+    background-size: contain;
+    right: -20px;
+}
+nav ul .entry-links li a#portfolio{
+    position: relative;
+}
+nav ul .entry-links li a#portfolio::after{
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    background-image: url('/img/fleche-vers-le-bas.svg');
+    background-size: contain;
+    right: -20px;
+}
+
+nav ul li{
+    list-style: none;
+    width: 15px;
+    margin-left: 5%;
+    display: flex;
+}
+
+nav ul li a{
     display: flex;
     align-items: center;
 }
 
+nav ul li a img{
+    width: 100%;
+}
+
+section.firstContent{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    background-image: url('/img/slider-bg.png');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-repeat: repeat-x;
+    position: relative;
+}
+
 section.firstContent article{
     width: 25%;
-    border: 1px solid green;
     left: 15%;
     position: relative;
 }
 
+section.firstContent .img-header{
+    width: 650px;
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+    position: absolute;
+    right: 15%;
+    background-image: url('/img/slider/hill.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+section.firstContent .img-header #house{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: -30px;
+    margin: auto;
+}
+section.firstContent .img-header #sun{
+    width: 75px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 100px;
+    left: 28%;
+    margin: auto;
+}
+section.firstContent .img-header #birds1{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    margin: auto;
+    left: 20px;
+    bottom: 80px;
+}
+section.firstContent .img-header #birds2{
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    margin: auto;
+    right: 60px;
+    bottom: 150px;
+}
+
 section.secondaryContent{
     width: 70%;
-    height: 300px;
+    height: 335px;
     margin: auto;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    border: 1px solid orange;
+    justify-content: space-evenly;
+    margin-top: 75px;
 }
 
 section.secondaryContent .cards{
     width: 30%;
-    border: 1px solid purple;
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.secondaryContent .cards p{
+    text-align: center;
+    margin: 0;
+}
+
+section.secondaryContent .cards h2{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 15px;
 }
 
 section.thirdContent{
     width: 100%;
-    height: 150px;
-    border: 1px solid red;
+    height: 125px;
+    margin-bottom: 100px;
     position: relative;
+    background-image: url('/img/tour-bg.png');
+    background-repeat: repeat;
+    background-position: center;
 }
 
 section.thirdContent article{
     width: 70%;
     height: 100%;
-    border: 1px solid blue;
     position: relative;
     margin: auto;
     display: flex;
@@ -94,106 +270,162 @@ section.thirdContent article{
     justify-content: center;
 }
 
+section.thirdContent article h2{
+    margin: 0;
+    text-align: unset;
+}
+
+section.thirdContent article span{
+    text-align: left;
+}
+
 section.thirdContent article button{
-    border: 1px solid green;
-    right: 10%;
+    right: 20%;
+    background-color: #fff;
+    z-index: 1;
     position: absolute;
+}
+
+section.thirdContent article picture{
+    position: absolute;
+    right: 0;
+    transform: translateX(55px);
 }
 
 section.fourContent{
     width: 100%;
-    height: 600px;
-    border: 1px solid red;
 }
 
 section.fourContent .left{
     width: 70%;
     height: 200px;
-    border: 1px solid blue;
+    max-width: 1440px;
     margin: auto;
+    margin-bottom: 100px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: end;
+}
+
+section.fourContent .left:last-of-type{
+    margin-bottom: 50px;
 }
 
 section.fourContent .left img{
     width: 400px;
     height: 184px;
-    border: 1px solid green;
-    margin: auto;
 }
 
 section.fourContent .left article{
-    width: 100%;
-    border: 1px solid orange;
+    width: 60%;
+    margin-left: 50px;
+}
+section.fourContent .left article h3{
+    margin: 0;
 }
 
 section.fourContent .right{
     width: 70%;
     height: 200px;
-    border: 1px solid blue;
     margin: auto;
+    margin-bottom: 100px;
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
-    align-items: center;
+    align-items: end;
+}
+
+section.fourContent .left img#left-sizing{
+    width: 100%;
+    height: 100%;
+    max-width: 385px;
+    max-height: 130px;
 }
 
 section.fourContent .right img{
-    width: 400px;
-    height: 184px;
-    border: 1px solid green;
-    margin: auto;
+    max-width: 427px;
+    max-height: 140px;
 }
 
 section.fourContent .right article{
-    width: 100%;
-    border: 1px solid orange;
+    width: 60%;
+    margin-right: 50px;
+}
+
+section.fourContent .right article h3{
+    margin: 0;
+    text-align: right;
+}
+
+section.fourContent .right article p{
+    text-align: right;
 }
 
 section.fiveContent{
     width: 70%;
-    height: 350px;
-    border: 1px solid purple;
     margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 section.fiveContent picture{
-    width: 150px;
-    height: 250px;
-    border: 1px solid cyan;
+}
+
+section.fiveContent h2{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+section.fiveContent span{
+    text-align: center;
 }
 
 section.fiveContent .multi-box{
     width: 100%;
+    max-width: 1440px;
     height: 50px;
-    border: 1px solid green;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    margin: 50px 0;
+}
+
+section.fiveContent .multi-box .size-box{
+    width: 15%;
+    max-width: 130px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 footer{
     width: 100%;
-    height: 500px;
-    border: 1px solid red;
+    height: 666px;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+    background-image: url('/img/under.png'), url('/img/footer.png');
+    background-position: center top, left bottom;
+    background-repeat: no-repeat, repeat-x;
 }
 
 footer span{
     position: absolute;
-    bottom: 0;
+    bottom: 25px;
+    text-align: center;
+    color: white;
+}
+
+footer span a{
+    text-decoration: none;
+    color: #68a5ad;
 }
 
 section.contentFooter{
     width: 65%;
-    border: 1px solid green;
     left: -2.5%;
     position: relative;
     display: flex;
@@ -203,19 +435,106 @@ section.contentFooter{
 section.contentFooter .un{
     width: 30%;
     height: 100%;
-    border: 1px solid brown;
+}
+section.contentFooter .un div.contentFooter{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+section.contentFooter .un div.contentFooter img{
+    width: 81px;
+    height: 81px;
+}
+
+section.contentFooter .un div.contentFooter article{
+    margin-left: 50px;
+}
+
+section.contentFooter .un div.contentFooter p{
+    position: relative;
+    width: unset;
+    
+}
+section.contentFooter .un div.contentFooter p::before{
+    content: '';
+    display: block;
+    position: absolute;
+    left: -20px;
+    width: 15px;
+    height: 15px;
+    background-image: url('/img/guillemet.svg');
+    background-size: contain;
+}
+
+section.contentFooter .un div.contentFooter p::after{
+    content: '';
+    display: block;
+    position: absolute;
+    right: -15px;
+    transform: rotate(180deg);
+    bottom: 0;
+    width: 15px;
+    height: 15px;
+    background-image: url('/img/guillemet.svg');
+    background-size: contain;
+}
+
+section.contentFooter .un div.contentFooter span{
+    position: unset;
+    color: #d3948d;
 }
 section.contentFooter .deux{
     width: 30%;
     height: 100%;
-    border: 1px solid brown;
 }
+
+section.contentFooter .deux div.contentFooter p{
+    margin: 0;
+}
+
+section.contentFooter .deux div.contentFooter p a{
+    text-decoration: none;
+    color: #da3106;
+}
+
 section.contentFooter .trois{
     width: 30%;
     height: 100%;
-    border: 1px solid brown;
 }
 section.contentFooter .trois form{
     display: flex;
     flex-direction: column;
+}
+
+section.contentFooter .trois form input{
+    padding: 5px;
+    border: 1px solid rgb(232, 232, 232);
+    margin-bottom: 10px;
+    border-radius: 3px;
+}
+
+section.contentFooter .trois form input::placeholder{
+    color:  rgb(199, 199, 199); 
+}
+
+section.contentFooter .trois form textarea{
+    padding: 5px;
+    border: 1px solid rgb(232, 232, 232);
+    margin-bottom: 10px;
+    border-radius: 3px;
+    max-height: 85px;
+}
+
+section.contentFooter .trois form button{
+    background-color: #4fccce;
+    color: white;
+    letter-spacing: 5px;
+    border-bottom: 3px solid #339293;
+}
+
+section.contentFooter .trois form textarea::placeholder{
+    color:  rgb(199, 199, 199); 
 }
